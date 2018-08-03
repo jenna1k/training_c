@@ -10,21 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include <stdlib.h>		// malloc
+#include <string.h>		// strdup ..?
 
 char	*ft_strcpy(char *dest, char *src)
 {
 	int i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i] != '\0')		// 문자열 끝을 만날때까지 루핑
 	{
-		dest[i] = src[i];
-		i++;
+		dest[i] = src[i];	// 담기
+		i++;			// 돌기
 	}
-	dest[i] = '\0';
-	return (dest);
+	dest[i] = '\0';			// 문자열 끝 붙이기
+	return (dest);			// 문자열 
 }
 
 char	*ft_strdup(char *src)
