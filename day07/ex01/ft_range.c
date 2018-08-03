@@ -20,10 +20,10 @@ int     *ft_range(int min, int max)
     int i;
 
     i = 0;
-    number = (int*)malloc(sizeof(*number) * ((max - min) + 1));
+    number = (int*)malloc(sizeof(*number) * ((max - min) + 1));  // no need + 1
     if (min >= max)
         return (NULL);
-    while(min <= max)
+    while(min <= max)   // sign should be <
     {
         number[i] = min;
         i++;
