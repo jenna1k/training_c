@@ -22,7 +22,7 @@ int		ft_ultimate_range(int **range, int min, int max)
 
 	i = 0;
 	diff = max - min;
-	array = (int*)malloc(sizeof(*array) * (diff + 1));
+	array = (int*)malloc(sizeof(*array) * (diff + 1));	// no + 1
 	if (min >= max)
 	{
 		*range = (void *)0;
