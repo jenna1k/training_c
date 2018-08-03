@@ -1,13 +1,12 @@
+#include <stdio.h>
 #include <stdlib.h>
 
-int     main(void)
+int main() 
 {
-    char** res;
-    for (res = ft_split_whitespaces("asdf qwerty zxcv"); *res != 0; res++)
-        printf("'%s',", *res);
-    printf("\n");
-    for (res = ft_split_whitespaces("s1   s2 \t\n\t\ns3"); *res != 0; res++)
-        printf("'%s',", *res);
-    printf("\n");
-    return (0);
+  int i;
+  char str[] = "sadf zxcv asdf";
+  char **arr;
+  arr = ft_split_whitespaces(str);
+  
+  return 0;
 }
