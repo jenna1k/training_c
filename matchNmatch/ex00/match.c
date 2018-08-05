@@ -15,50 +15,30 @@
 // In software, a wildcard character is a kind of placeholder
 
 #include <stdio.h>
-#include <stdbool.h>    // boolean type
  
 // The main function that checks if two given strings
-// match. The first string may contain wildcard characters
-bool match(char *first, char * second)
+// match. The s1 string may contain wildcard characters
+int match(char *s1, char *s2)
 {
     // If we reach at the end of both strings, we are done
-    if (*first == '\0' && *second == '\0')
-        return true;
+    if (*s1 == '\0' && *s2 == '\0')
+        return (1);
  
     // Make sure that the characters after '*' are present
-    // in second string. This function assumes that the first
+    // in s2 string. This function assumes that the s1
     // string will not contain two consecutive '*'
-    if (*first == '*' && *(first+1) != '\0' && *second == '\0')
-        return false;
+    if (*s1 == '*' && *(s1+1) != '\0' && *s2 == '\0')
+        return (0);
  
-    // If the first string contains '?', or current characters
+    // If the s1 string contains '?', or current characters
     // of both strings match
-    if (*first == '?' || *first == *second)
-        return match(first+1, second+1);
+    if (*s1 == '?' || *s1 == *s2)
+        return (match(s1+1, s2+1));
  
     // If there is *, then there are two possibilities
-    // a) We consider current character of second string
-    // b) We ignore current character of second string.
-    if (*first == '*')
-        return match(first+1, second) || match(first, second+1);
-    return false;
-}
- 
-// A function to run test cases
-void test(char *first, char *second)
-{  match(first, second)? puts("Yes"): puts("No"); }
- 
-// Driver program to test above functions
-int main()
-{
-    test("g*ks", "geeks"); // Yes
-    test("ge?ks*", "geeksforgeeks"); // Yes
-    test("g*k", "gee");  // No because 'k' is not in second
-    test("*pqrs", "pqrst"); // No because 't' is not in first
-    test("abc*bcd", "abcdhghgbcd"); // Yes
-    test("abc*c?d", "abcd"); // No because second must have 2
-                             // instances of 'c'
-    test("*c*d", "abcd"); // Yes
-    test("*?c*d", "abcd"); // Yes
-    return 0;
+    // a) We consider current character of s2 string
+    // b) We ignore current character of s2 string.
+    if (*s1 == '*')
+        return (match(s1+1, s2) || match(s1, s2+1));
+    return (0);
 }
