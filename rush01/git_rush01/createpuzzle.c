@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-int		createpuzzle(int **numbers, int row, int col, int value)
+int		createpuzzle(int **numbers, int row, int col, int value) // (numbers, x, y, i) from solve sudoku function
 {
 	int x;
 	int y;
@@ -37,21 +37,21 @@ int		createpuzzle(int **numbers, int row, int col, int value)
 		}
 		x++;
 	}
-	return (1);
+	return (1);	// return TRUE
 }
 
-int		solve_sudoku(int **numbers, int value)
+int		solve_sudoku(int **numbers, int value) // (numbers, 0) from main
 {
 	int i;
 	int x;
 	int y;
 
 	i = 1;
-	x = value / 9; // row
-	y = value % 9; // column
-	if (value == 81)
-		return (1);
-	if (numbers [x][y] != 0)
+	x = value / 9; // row????
+	y = value % 9; // column?????
+	if (value == 81)	// if it's end of table
+		return (1);		// return false which is end of program
+	if (numbers [x][y] != 0)	// ???
 		return (solve_sudoku(numbers, value + 1));
 	while (i < 10)
 	{
