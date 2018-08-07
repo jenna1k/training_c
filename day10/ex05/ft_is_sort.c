@@ -1,14 +1,10 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_is_sort.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dakim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/07 13:37:18 by dakim             #+#    #+#             */
-/*   Updated: 2018/08/07 13:37:19 by dakim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+// * Create a function ft_is_sort which returns 1 if the array is sorted and 0 if it isn’t.
+
+// * The function given as argument should return a negative integer if the first argument
+// is lower than the second, 0 if they’re equal or a positive integer for anything else.
+
+// * Here’s how the function should be prototyped :
+// int		ft_is_sort(int *tab, int length, int (*f)(int, int))
 
 int		ft_is_sort(int *tab, int length, int (*f)(int, int))
 {
