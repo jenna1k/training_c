@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int		starts_with_z(char *str)
-{
-	return (str[0] == 'z');
-}
+// int		starts_with_z(char *str)
+// {
+// 	return (str[0] == 'z');
+// }
 
 int		ft_any(char **tab, int (*f)(char*))
 {
@@ -31,9 +31,9 @@ int		ft_any(char **tab, int (*f)(char*))
 	return (0);
 }
 
-int		main(int argc, char **argv)
-{
-	if (argc == 2)
-		printf("%d", ft_any(argv + 1, starts_with_z));
-	return (1);
-}
+// int		main(int argc, char **argv)
+// {
+// 	if (argc == 2)
+// 		printf("%d", ft_any(argv + 1, starts_with_z));
+// 	return (1);
+// }
