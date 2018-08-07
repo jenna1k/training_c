@@ -10,10 +10,10 @@ int		ft_is_sort(int *tab, int length, int (*f)(int, int))
 {
 	int i;
 
-	i = 1;
-	while (i < length)
+	i = 1;		// why 'i' should start at 1?
+	while (i < length)	// while(length) doesn't work
 	{
-		if (f(tab[i - 1], tab[i]) > 0)
+		if (f(tab[i - 1], tab[i]) > 0) 	// i = 0; f(tab[i], tab[i + 1]) > 0 didn't work
 			return (0);
 		i++;
 	}
