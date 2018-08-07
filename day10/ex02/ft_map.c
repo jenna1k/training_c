@@ -9,14 +9,14 @@
 /*   Updated: 2018/08/06 19:09:02 by dakim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+// #include <stdlib.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int		addfive(int n)
-{
-	return(n + 5);
-}
+// int		addfive(int n)
+// {
+// 	return(n + 5);
+// }
 
 int     *ft_map(int *tab, int length, int(*f)(int))
 {
@@ -35,17 +35,17 @@ int     *ft_map(int *tab, int length, int(*f)(int))
 	return (array);
 }
 
-int     main(void)
-{
-	int i;
-	int array[] = {5, 10, 15};
+// int     main(void)
+// {
+// 	int i;
+// 	int array[] = {5, 10, 15};
 
-	i = 0;
-	int *arr = ft_map(array, 3, &addfive);
-	while (i < 3)
-	{
-		printf("%d", arr[i]);
-		i++;
-	}
-	return (0);
-}
+// 	i = 0;
+// 	int *arr = ft_map(array, 3, &addfive);
+// 	while (i < 3)
+// 	{
+// 		printf("%d", arr[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }
