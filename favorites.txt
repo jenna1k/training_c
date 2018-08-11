@@ -1,0 +1,13 @@
+https://profile.intra.42.fr/
+https://campus.42.us.org/
+http://pythontutor.com/c.html#mode=edit
+http://man7.org/linux/man-pages/
+https://overiq.com/c-programming/101/intro-to-c-programming/
+https://fresh2refresh.com/c-programming/
+https://www.geeksforgeeks.org/pointer-array-array-pointer/
+https://blog.naver.com/go4693/221014298289
+https://www.geeksforgeeks.org/wildcard-character-matching/
+https://www.youtube.com/watch?v=X1Ge86RQBRs
+
+https://www.strchr.com/expression_evaluator
+https://www.tutorialspoint.com/data_structures_algorithms/expression_parsing_using_statck.htm
