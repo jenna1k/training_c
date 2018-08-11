@@ -1,0 +1,72 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z3r6p17.42.us.org
+Darwin 17.4.0 x86_64
+$> date
+Fri Aug 10 20:32:34 PDT 2018
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2018/piscine-c-exam02/exam_20180811/dakim
+
+= Git history ==================================================================
+$> git -C /var/folders/rv/w9t4k87n3h7dvpwc7zv6nxtw0000gp/T/tmpsFnjv4/user log --pretty='%H - %an, %ad : %s'
+905bfded8c99d9b1a23dc0faa14cc8fd1f2ec97b - Exam 42, Fri Aug 10 20:32:13 2018 -0700 : ft_strcpy
+5feb2eae0fb88fd8d8f7c575a8ee15507a1c6b0e - Exam 42, Fri Aug 10 19:52:27 2018 -0700 : finished repeat_alpha
+7158864c7993a1ed5afe5902962e516420908a29 - Exam 42, Fri Aug 10 18:55:34 2018 -0700 : completed first_word
+2faa2791aa77b27918f0e3240e4639ead9298f18 - Exam 42, Fri Aug 10 18:39:33 2018 -0700 : completed rev_print.c
+3c37c6bb322a1226f74e9493e356b549abedd7a1 - Exam 42, Fri Aug 10 18:10:25 2018 -0700 : completed maff_alpha
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/rv/w9t4k87n3h7dvpwc7zv6nxtw0000gp/T/tmpsFnjv4/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1431 Aug 10 20:32 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 20:32 first_word
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 20:32 ft_strcpy
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 20:32 maff_alpha
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 20:32 repeat_alpha
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 20:32 rev_print
+
+/var/folders/rv/w9t4k87n3h7dvpwc7zv6nxtw0000gp/T/tmpsFnjv4/user/first_word:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1271 Aug 10 20:32 first_word.c
+
+/var/folders/rv/w9t4k87n3h7dvpwc7zv6nxtw0000gp/T/tmpsFnjv4/user/ft_strcpy:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1016 Aug 10 20:32 ft_strcpy.c
+
+/var/folders/rv/w9t4k87n3h7dvpwc7zv6nxtw0000gp/T/tmpsFnjv4/user/maff_alpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  980 Aug 10 20:32 maff_alpha.c
+
+/var/folders/rv/w9t4k87n3h7dvpwc7zv6nxtw0000gp/T/tmpsFnjv4/user/repeat_alpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1536 Aug 10 20:32 repeat_alpha.c
+
+/var/folders/rv/w9t4k87n3h7dvpwc7zv6nxtw0000gp/T/tmpsFnjv4/user/rev_print:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1262 Aug 10 20:32 rev_print.c
+ 
+= ft_strcpy ====================================================================
+$> gcc -Wextra -Wall -Werror main.c ft_strcpy.c -o user_exe 
+ft_strcpy.c:23:9: error: incompatible integer to pointer conversion returning 'char' from a function with result type 'char *'; take the address with & [-Werror,-Wint-conversion]
+        return (*s1);
+               ^~~~~
+               &
+1 error generated.
+
+Could not compile 'user_exe'
+Grade: 0
+
+= Final grade: 0 ===============================================================

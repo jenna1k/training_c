@@ -1,0 +1,59 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z4r14p1.42.us.org
+Darwin 17.5.0 x86_64
+$> date
+Fri Aug 10 18:40:34 PDT 2018
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2018/piscine-c-exam02/exam_20180811/dakim
+
+= Git history ==================================================================
+$> git -C /var/folders/yp/p8zl5qzs2gggv91vmtbs2szr0000gp/T/tmpYWryoM/user log --pretty='%H - %an, %ad : %s'
+2faa2791aa77b27918f0e3240e4639ead9298f18 - Exam 42, Fri Aug 10 18:39:33 2018 -0700 : completed rev_print.c
+3c37c6bb322a1226f74e9493e356b549abedd7a1 - Exam 42, Fri Aug 10 18:10:25 2018 -0700 : completed maff_alpha
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/yp/p8zl5qzs2gggv91vmtbs2szr0000gp/T/tmpYWryoM/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  671 Aug 10 18:40 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Aug 10 18:40 maff_alpha
+drwxr-xr-x  3 deepthought  deepthought  102 Aug 10 18:40 rev_print
+
+/var/folders/yp/p8zl5qzs2gggv91vmtbs2szr0000gp/T/tmpYWryoM/user/maff_alpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  980 Aug 10 18:40 maff_alpha.c
+
+/var/folders/yp/p8zl5qzs2gggv91vmtbs2szr0000gp/T/tmpYWryoM/user/rev_print:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1262 Aug 10 18:40 rev_print.c
+ 
+= rev_print ====================================================================
+$> gcc -Wextra -Wall -Werror rev_print.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./tc5h716ttokxcmo648ztz6hk 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./789teb3v268ihziq69fz81q6 "eV4r3OYS"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+Binary files user_output_test2 and test2.output differ$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================

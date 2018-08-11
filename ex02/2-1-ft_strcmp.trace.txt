@@ -1,0 +1,105 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r5p16.42.us.org
+Darwin 17.4.0 x86_64
+$> date
+Fri Aug 10 21:00:44 PDT 2018
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2018/piscine-c-exam02/exam_20180811/dakim
+
+= Git history ==================================================================
+$> git -C /var/folders/4g/rxrdcxc53b5b8csdsk5l_1c80000gp/T/tmpJloRj_/user log --pretty='%H - %an, %ad : %s'
+c1c8c83cd28853a15f6f8a9932584a7472202d91 - Exam 42, Fri Aug 10 21:00:36 2018 -0700 : ft_strcmp.c
+b624c52fc8e9da149bdd778df678b781ded2b643 - Exam 42, Fri Aug 10 20:38:40 2018 -0700 : ft_putstr
+905bfded8c99d9b1a23dc0faa14cc8fd1f2ec97b - Exam 42, Fri Aug 10 20:32:13 2018 -0700 : ft_strcpy
+5feb2eae0fb88fd8d8f7c575a8ee15507a1c6b0e - Exam 42, Fri Aug 10 19:52:27 2018 -0700 : finished repeat_alpha
+7158864c7993a1ed5afe5902962e516420908a29 - Exam 42, Fri Aug 10 18:55:34 2018 -0700 : completed first_word
+2faa2791aa77b27918f0e3240e4639ead9298f18 - Exam 42, Fri Aug 10 18:39:33 2018 -0700 : completed rev_print.c
+3c37c6bb322a1226f74e9493e356b549abedd7a1 - Exam 42, Fri Aug 10 18:10:25 2018 -0700 : completed maff_alpha
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/4g/rxrdcxc53b5b8csdsk5l_1c80000gp/T/tmpJloRj_/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1906 Aug 10 21:00 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 21:00 first_word
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 21:00 ft_putstr
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 21:00 ft_strcmp
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 21:00 ft_strcpy
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 21:00 maff_alpha
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 21:00 repeat_alpha
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 21:00 rev_print
+
+/var/folders/4g/rxrdcxc53b5b8csdsk5l_1c80000gp/T/tmpJloRj_/user/first_word:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1271 Aug 10 21:00 first_word.c
+
+/var/folders/4g/rxrdcxc53b5b8csdsk5l_1c80000gp/T/tmpJloRj_/user/ft_putstr:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1066 Aug 10 21:00 ft_putstr.c
+
+/var/folders/4g/rxrdcxc53b5b8csdsk5l_1c80000gp/T/tmpJloRj_/user/ft_strcmp:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1093 Aug 10 21:00 ft_strcmp.c
+
+/var/folders/4g/rxrdcxc53b5b8csdsk5l_1c80000gp/T/tmpJloRj_/user/ft_strcpy:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1016 Aug 10 21:00 ft_strcpy.c
+
+/var/folders/4g/rxrdcxc53b5b8csdsk5l_1c80000gp/T/tmpJloRj_/user/maff_alpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  980 Aug 10 21:00 maff_alpha.c
+
+/var/folders/4g/rxrdcxc53b5b8csdsk5l_1c80000gp/T/tmpJloRj_/user/repeat_alpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1536 Aug 10 21:00 repeat_alpha.c
+
+/var/folders/4g/rxrdcxc53b5b8csdsk5l_1c80000gp/T/tmpJloRj_/user/rev_print:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1262 Aug 10 21:00 rev_print.c
+ 
+= ft_strcmp ====================================================================
+$> gcc -Wextra -Wall -Werror main.c ft_strcmp.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./rvmjvbgdr87nli0e3xml68wv 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./irxaj5bpyeuewzdedeh92a1g "salut a tous tout le monde"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./ke5i4v3lkga0afnip02krayj "salut" "a" "tous" "tout" "le" "monde"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./js759rx8whv4m24xzopqu1m0 "a" "ab"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+--- user_output_test4	2018-08-10 21:00:47.000000000 -0700$
++++ test4.output	2018-08-10 21:00:47.000000000 -0700$
+@@ -1 +1 @@$
+-1$
+\ No newline at end of file$
++-1$
+\ No newline at end of file$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================
